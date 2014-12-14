@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Predictive Text Application</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Predictive Text Application">
+  <meta name="author" content="A Clinnin">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Predictive Text Application</h1>
+    <h2>Coursera Data Science Capstone Project</h2>
+    <p>A Clinnin<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Locating the Application</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>The production application is available at <a href="https://aclinnin.shinyapps.io/Final/">https://aclinnin.shinyapps.io/Final/</a></p></li>
+<li><p>For more information on development, all code is available on GitHub at <a href="https://github.com/clinnin/Capstone">https://github.com/clinnin/Capstone</a></p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Application Instructions and Source</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>This program was designed for speed and simplicity: all that is necessary to use the application is to type text into the input box, click submit, and the predicted next word will populate to the right. </p></li>
+<li><p>This application uses a pre-processed sample of text gathered from news articles, blogs, and social media to develop a recent, relevant understanding of natural language in English (US) text. </p></li>
+<li><p>This body of text was cleaned for profanity, special characters, excess whitespace, and stopwords to limit it to the most useful language components.</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Process and Algorithm</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>This application takes a minimalist approach to the prediction algorithm in order to maximize speed. The input string is cleaned up (removing profanity, stopwords, special characters, numbers, whitespace, and leading and trailing spaces) and compared to the corpus generated from the n-gram processing performed in the development of this application. The word with the highest frequency to follow the n-gram submitted is returned as the predicted word.</p></li>
+<li><p>A series of modeling techniques was applied in the development, chiefly Katz&#39;s Back-Off Model (<a href="http://en.wikipedia.org/wiki/Katz%27s_back-off_model">http://en.wikipedia.org/wiki/Katz%27s_back-off_model</a>). However, the efficiency lost in the application of this and other techniques took away from the main goals of the application: portability and speed.</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Extensions</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Development versions of this application made use of more advanced modeling techniques and a larger collection of reference n-grams. These led to the highly desirable outcomes of greater accuracy and longer n-gram lengths. If speed and portability were not the primary goals of this application, a slower but more precise version of this application should be implemented in a future release.</p></li>
+<li><p>Further, it would be helpful to return more than one predicted word to allow a range of options to the user. It is solely the &quot;single word returned&quot; evaluation criteria of this project that limited the outcome to a single word returned.</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Locating the Application'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Application Instructions and Source'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Process and Algorithm'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Extensions'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
